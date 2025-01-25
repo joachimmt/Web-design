@@ -1,6 +1,7 @@
-import Link from "next/link";
-import { Button } from "./ui/button";
+"use client";
 
+import Link from "next/link";
+import {Button, ButtonGroup} from "@heroui/react";
 // components
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
@@ -11,16 +12,17 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* logo */}
         <Link href="/">
-          <h1 className="text-4xl font-semibold">
-            WebDesigneo<span className="text-accent">.</span>
+          <h1 className="text-4xl font-semibold text-fuchsia-600">
+            WebDesigneo<span className="text-accent text-fuchsia-600">.</span>
           </h1>
+
         </Link>
 
         {/* desktop nav & hire me button */}
-        <div className="hidden xl:flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-8 ">
           <Nav />
           <Link href="/contact">
-            <Button className="bg-black">Contactez moi!</Button>
+          <Button  className="bg-yellow-500 rounded-full px-9 pt-8 pb-8" size="md">ME CONTACTER</Button>
           </Link>
         </div>
 
