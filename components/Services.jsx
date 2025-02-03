@@ -13,7 +13,7 @@ export default function Services() {
       <h1 className="text-xl md:text-6xl mr-auto text-[#7b66ff]  ">SERVICES</h1>
       <p className={`${montserrat.className} text-xl md:text-4xl md:w-3/4 mt-4 leading-loose md:leading-relaxed lg:leading-normal text-justify`}> Un site web à votre image est la clé d’un <span className='font-semibold'>résultat optimal.</span> <br />
       Je vous propose <span className='font-semibold'>une gamme complète de services sur mesure,</span> <br /> conçus pour répondre à tous vos besoins et <span className='font-semibold'>garantir votre réussite en ligne.</span> </p>
-      <div className='flex mt-5 gap-8 justify-between'>
+      <div className='mt-5 gap-8 justify-between flex flex-col md:flex-row'>
         <div>L</div>
         <div>LA</div>
         <div>LA</div>

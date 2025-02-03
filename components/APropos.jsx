@@ -16,7 +16,7 @@ const waterfall = Waterfall({
 
 export default function APropos() {
   return (
-    <div className="container mx-auto flex flex-col mt-8 mb-6 px-4 pt-[100px]">
+    <div className="container mx-auto flex flex-col mt-8 mb-6 px-4 pt-[10px] md:pt-[80px]">
       {/* Titre */}
       <h1 className={`${waterfall.className} text-6xl xl:text-xxl md:text-6xl lg:text-[100px] text-[#7b66ff] ml-0 xl:ml-auto pb-2 md:pb-5`}>
         Bonjour ! Moi c'est Chloé,
