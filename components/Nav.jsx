@@ -8,13 +8,13 @@ const links = [
     name: "ACCUEIL",
     path: "/",
   },
-  // {
-  //   name: "À PROPOS",
-  //   path: "/services",
-  // },
+  {
+    name: "À PROPOS",
+    path: "/a-propos",
+  },
   {
     name: "SERVICES",
-    path: "/resume",
+    path: "/service",
   },
   {
     name: "CRÉATIONS",

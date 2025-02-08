@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="">
       {/* <p>Home page</p> */}
-      <BannerImage />
+      {/* <BannerImage /> */}
       <APropos />
       <Services />
       <Creations />
