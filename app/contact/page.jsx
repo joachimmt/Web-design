@@ -40,8 +40,8 @@ export default function ContactPage() {
   return (
     <div>
       <div className="bg-[#9747ff] flex flex-col py-[10rem]">
-        <h1 className="ml-[92rem] font-['Montserrat'] text-5xl font-normal leading-[52px] text-white ">Une question ? Une idée?</h1>
-        <p className="ml-[92rem] text-5xl text-[#fdc350] font-['Montserrat'] leading-[52px] ">Parlons-en!</p>
+        <h1 className=" md:ml-[92rem] font-['Montserrat'] md:text-5xl text-4xl font-normal leading-[52px] text-white ">Une question ? Une idée?</h1>
+        <p className="md:ml-[92rem] md:text-5xl text-4xl  text-[#fdc350] font-['Montserrat'] leading-[52px] ">Parlons-en!</p>
       </div>
        <motion.section
       initial={{ opacity: 0 }}
