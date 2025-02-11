@@ -40,62 +40,38 @@ const MotionH1 = React.forwardRef(function MotionH1({ children, ...props }, ref)
 });
 
 export default function APropos() {
-  // Texte à animer
-  const texte = `
-    je suis une Franco-Canadienne passionnée par la création et la stratégie web.
-    Forte de quatre années d’expérience dans le marketing, je mets aujourd’hui
-    mon expertise au service des entreprises désireuses de valoriser leur image
-    et de se démarquer, tant à travers leur site internet que leurs réseaux sociaux.
-    Mon objectif : transformer vos idées en un design unique, mémorable et à la
-    hauteur de vos ambitions.
-  `;
-
-  // Convertir le texte en un tableau de lettres
+  const texte = `Passionnée de création et stratégie web, j’aide les entreprises à se démarquer en ligne avec un design unique et impactant`;
   const texteArray = texte.split("");
 
   return (
-    <div className="bg-[#9747ff] pb-[10rem] pt-1">
+    <div className="bg-[#9747ff] pb-[8rem] pt-1 mt-8">
       <div className="container mx-auto flex flex-col md:flex-row justify-start items-start mt-8 mb-6 px-4 pt-[10px] md:pt-[80px]">
-        {/* Conteneur Flex pour photo et texte */}
-        <div className="flex flex-col md:flex-row justify-between gap-8 mt-8 md:mt-0">
-          {/* Photo avec animation d'entrée */}
-          <motion.div
-            className="flex-1 md:w-1/3" // La photo prendra 1/3 de la largeur sur les grands écrans
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 1, // Durée de l'animation de la photo
-              delay: 0.5,   // Délai avant l'apparition de la photo
-              ease: "easeOut",
-            }}
-          >
-            <Photo />
-          </motion.div>
-
-          {/* Conteneur pour le texte */}
-          <div className="flex flex-col justify-start md:w-2/3">
+        {/* Changer l'ordre en mobile (texte avant photo) */}
+        <div className="flex flex-col-reverse md:flex-row justify-between gap-8 mt-8 md:mt-0">
+          {/* Texte en premier en mobile */}
+          <div className="flex flex-col justify-start md:w-2/3 mt-11">
             {/* Titre animé */}
             <MotionH1
-              className="text-white text-6xl xl:text-xxl md:text-6xl lg:text-[100px] ml-0 xl:ml-auto pb-2 md:pb-5 font-[`waterfall`] mt-8 md:mt-0"
+              className="text-white text-6xl md:text-6xl lg:text-[100px] text-center md:text-left pb-2 md:pb-5  md:mt-0"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{
-                duration: 1, // Durée de l'animation du titre
-                delay: 1,    // Délai pour que le titre apparaisse après la photo
+                duration: 1,
+                delay: 0.5,
               }}
             >
               Bonjour ! Moi c'est Chloé,
             </MotionH1>
 
-            {/* Texte avec effet de dactylo */}
+            {/* Texte animé */}
             <motion.p
-              className={`${montserrat.className} text-s md:text-lg lg:text-4xl text-justify text-white leading-loose md:leading-relaxed lg:leading-normal md:w-3/4`}
+              className={`${montserrat.className} font-extrabold mt-[2rem] md:mt-[7rem] text-3xl md:text-4lg lg:text-5xl text-center md:text-left text-white leading-loose md:leading-relaxed lg:leading-normal md:w-3/4`}
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
               transition={{
-                duration: 5, // Accélérer l'animation du texte
+                duration: 3,
                 ease: "linear",
-                delay: 1.5, // Début de l'animation après le titre
+                delay: 1,
               }}
               style={{
                 overflow: "hidden",
@@ -108,8 +84,8 @@ export default function APropos() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{
-                    delay: index * 0.05, // Délai réduit entre chaque caractère
-                    duration: 0.05,
+                    delay: index * 0.03,
+                    duration: 0.04,
                   }}
                 >
                   {char}
@@ -117,6 +93,20 @@ export default function APropos() {
               ))}
             </motion.p>
           </div>
+
+          {/* Photo après texte en mobile */}
+          <motion.div
+            className="flex-1 w-2/3 mx-auto md:w-1/3 md:mx-0" // Réduction de la taille en mobile
+            initial={{ opacity: 0, scale: 0.5 }} // Plus petite au départ
+            animate={{ opacity: 1, scale: 0.8 }} // Reste plus petite en mobile
+            transition={{
+              duration: 1,
+              delay: 2, // Affichage après le texte
+              ease: "easeOut",
+            }}
+          >
+            <Photo />
+          </motion.div>
         </div>
       </div>
     </div>
