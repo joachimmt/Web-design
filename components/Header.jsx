@@ -8,16 +8,14 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="py-8 xl:py-12 text-white">
+    <header className="py-8 xl:py-12 text-white bg-[#9747ff] fixed left-0 right-0 top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* logo */}
         <Link href="/">
-         <h1 className="text-4xl font-semibold whitespace-nowrap text-[#7b66ff] ">
-  Web
-  <span className="bg-gradient-to-r from-gradientStart to-gradientEnd bg-clip-text text-transparent">Designeo</span>
-  <span className="bg-gradient-to-r from-gradientStart to-gradientEnd bg-clip-text text-transparent">.</span>
-</h1>
-
+          <h1 className="text-4xl  whitespace-nowrap text-white font-bold ">
+            WebDesigneo
+            <span className="font-bold">.</span>
+          </h1>
         </Link>
 
         {/* desktop nav & hire me button */}
